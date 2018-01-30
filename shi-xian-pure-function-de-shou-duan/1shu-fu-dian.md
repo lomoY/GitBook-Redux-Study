@@ -78,6 +78,14 @@ var d = {...a,...b,x:5}//{a: 1, b: 3, c: 4, x: 5}
 //上述操作并不改变原对象
 ```
 
+#### 原对象基础上修改属性
+
+```js
+var a = {id:1,sex:'male',age:19};
+var b = {...a,id:30};//或者var b = {id:30, ...a}
+b//{id:30,sex:'male',age:19};
+```
+
 ## Map方法处理数组
 
 * map\(\)方法返回一个新数组，数组中的元素为原始数组元素调用函数处理的后值。
@@ -101,7 +109,12 @@ var state=[{id:0,completed:true},
 
 var action={id:2,completed:false};
 
-//state.map的逻辑是：将发生action的item的ID与state中每个item的id进行比较，如果比较结果为false，那就原样返回
+/**
+*state.map的逻辑是:将发生action的item的ID与state中每个item的id进行比较,
+*如果比较结果为false,那就将元素原样返回；
+*如果比较结果为true,那就修改需要修改的属性，然后返回
+*整个map操作将返回一个新的数组
+**/
 state.map(todo=>{
     if(todo.id!==action.id){
         return todo;
@@ -112,8 +125,6 @@ state.map(todo=>{
     };
 });
 ```
-
-
 
 
 
