@@ -41,7 +41,7 @@ const todoAPP = combineReducers({
 })
 ```
 
-由于es6中对象字面量的shorthand语法，我们可以将上面的代码改写如下。但是这里有一个约定，那就是’**reducer的名字必须和所对应子state的名字一致**‘。
+由于es6中对象字面量的_shorthand_语法，我们可以将上面的代码改写如下。但是这里有一个约定，那就是’**reducer的名字必须和所对应子state的名字一致**‘。
 
 ```js
 const todoAPP = combineReducers({
