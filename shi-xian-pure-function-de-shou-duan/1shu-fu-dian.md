@@ -1,6 +1,6 @@
 # 在pure function中更新状态的方法
 
-Object.assign\(\)及扩展运算符
+## Object.assign\(\)及扩展运算符
 
 Object.assign\(\)
 
@@ -8,7 +8,7 @@ Object.assign\(\)
 
 语法：`Object.assign(targetObj, ...sourcesObj)`
 
-克隆对象（单个源对象时）
+#### 克隆对象（单个源对象时）
 
 ```js
 var obj1={a:1}
@@ -17,7 +17,7 @@ var obj2 = Object.assign({},obj1)
 obj2//输出{a:1}
 ```
 
-### 合并对象（多个源对象时）
+#### 合并对象（多个源对象时）
 
 ```
 var obj1={a:1}
@@ -40,7 +40,7 @@ Object.assign\(\)
 
 如对象、数组
 
-### 复制数组
+#### 复制数组
 
 ```js
 const a = [1,2]；
@@ -49,7 +49,7 @@ const b2 = [a]//得到[[1,2]]
 b1===a//false,说明是对象的复制
 ```
 
-### 复制对象
+#### 复制对象
 
 ```js
 var obj1={a:1,b:2}
@@ -57,7 +57,7 @@ var obj2={...obj1}//得到{a:1,b:1}
 obj1===obj2//false,说明是对象的复制
 ```
 
-### 合并数组
+#### 合并数组
 
 ```js
 var a =[1,2];
@@ -67,7 +67,7 @@ var c = [...a,...b];//[1,2,3,4]
 //上述操作并不改变原数组
 ```
 
-### 合并对象
+#### 合并对象
 
 ```js
 var a = {a: 1, b: 2}
@@ -76,6 +76,20 @@ var c = {...a,...b};//{a: 1, b: 3, c: 4}
 var d ={...a,...b,x:5}//{a: 1, b: 3, c: 4, x: 5}
 
 //上述操作并不改变原对象
+```
+
+## Map方法处理数组
+
+* map\(\)方法返回一个新数组，数组中的元素为原始数组元素调用函数处理的后值。
+* map\(\)方法按照原始数组元素顺序依次处理元素
+* map不会改变原始数组
+
+```js
+var arr = [1,2,3];
+var arrSqure = arr.map(function(num){
+    return num*2;
+})
+arrDouble//得到[2,4,6]，同时不改变原数组
 ```
 
 
