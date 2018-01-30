@@ -92,5 +92,13 @@ var arrSqure = arr.map(function(num){
 arrDouble//得到[2,4,6]，同时不改变原数组
 ```
 
+```js
+[{id:0,completed:true},
+ {id:1,completed:true},
+ {id:2,completed:true}]
+ 
+
+```
+
 
 
