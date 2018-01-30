@@ -5,7 +5,7 @@
 ```js
 var a=1;
 var b=2;
-var newObj ={a,b};
+var newObj ={a,b};//本质上就是 var newObj ={a:a,b:b}
 newObj//{a:1,b:2}
 ```
 
