@@ -92,12 +92,26 @@ var arrSqure = arr.map(function(num){
 arrDouble//得到[2,4,6]，同时不改变原数组
 ```
 
-```js
-[{id:0,completed:true},
- {id:1,completed:true},
- {id:2,completed:true}]
- 
 
+
+例子：希望通过map函数只改变指定id的completed值
+
+```js
+var state=[{id:0,completed:true},
+           {id:1,completed:true},
+           {id:2,completed:true}];
+ 
+var action={id:2,completed:false};
+ 
+state.map(todo=>{
+    if(todo.id!==action.id){
+    	return todo;
+    }
+    return{
+        ...todo,
+        completed:!action.completed
+    };
+}); 
 ```
 
 
