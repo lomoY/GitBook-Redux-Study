@@ -32,13 +32,19 @@ Object.assign\(\)
 
 同样可以作用于数组
 
-## 扩展运算符
+## 扩展运算符spread
 
 `...`
 
 被复制的对象必须是可遍历的：
 
 如对象、数组
+
+注意：如果要在当前开发中使用扩展运算符，需要在`.babelrc`中进行配置，我的配置是:
+
+```
+"plugins":["transform-es2015-destructuring", "transform-object-rest-spread"]
+```
 
 #### 复制数组
 
