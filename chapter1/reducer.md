@@ -22,10 +22,32 @@ const todoAPP = (state=[],action) =>{
 ```js
 const todoAPP = (state=[],action) =>{
     return {
-        todos:todo(state.todos,action),//todos reducer只处理state中的todos
+        todos:todos(state.todos,action),//todos reducer只处理state中的todos
         visibilityFilter:visibilityFilter(state.visibilityFilter,action)//如果写成了state.vis,那就相当于输入了undefiend
     }
 }
+```
+
+由于Reducer的合并是必然也是必要的，Redux专门提供了一个方法:`combineReducers(reducers)`
+
+# combineReducers\(reducers\) {#-combinereducers-reducers}
+
+这个函数将不同的子state和子reducer匹配到一起，最终返回一个整合的reducer。参数是一个对象，对象的键表示了子reducer所要处理的子state
+
+```js
+const todoAPP = combineReducers({
+    todos:todos,
+    visibilityFilter:visibilityFilter
+})
+```
+
+由于es6中对象字面量的shorthand语法，我们可以将上面的代码改写如下。但是这里有一个约定，那就是’**reducer的名字必须和所对应子state的名字一致**‘。
+
+```js
+const todoAPP = combineReducers({
+     todos,
+     visibilityFilter
+})
 ```
 
 
