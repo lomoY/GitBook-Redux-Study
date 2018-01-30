@@ -40,7 +40,7 @@ Object.assign\(\)
 
 如对象、数组
 
-注意：如果要在当前开发中使用扩展运算符，需要在`.babelrc`中进行配置，我的配置是:
+注意：如果要在当前开发中使用扩展运算符，需要在`.babelrc`中进行配置，否则在编译过程中会出现`SyntaxError: Unexpected token`我的配置是:
 
 ```
 "plugins":["transform-es2015-destructuring", "transform-object-rest-spread"]
