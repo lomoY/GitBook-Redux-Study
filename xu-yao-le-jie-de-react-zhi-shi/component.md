@@ -29,7 +29,7 @@ console.log(Component===React.Component)//true
 
 ## 组合VS.继承
 
-
+官方文档：https://reactjs.org/docs/composition-vs-inheritance.html
 
 
 
