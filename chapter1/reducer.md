@@ -52,20 +52,34 @@ const todoAPP = combineReducers({
 
 #### combineReducer的实现原理
 
-Object.key\(对象\)，该函数并返回一个包含所传入对象所有属性名的数组
+了解实现原理前，应当了解下面的两个函数
+
+##### Object.key\(对象\)
+
+该函数并返回一个包含所传入对象所有属性名的数组
 
 ```js
 var obj1 ={a:1,b:2}
 Object.keys(obj1);//得到["a", "b"]
 ```
 
-数组.reduce\(\)
+##### 数组.reduce\(\)
+
+语法：`arr.reduce(callback,[initialValue)`
+
+* callback （执行数组中每个值的函数，包含四个参数）
+
+* * previousValue （上一次调用回调返回的值，或者是提供的初始值（initialValue））
+  * currentValue （数组中当前被处理的元素）
+  * index （当前元素在数组中的索引）
+  * array （调用 reduce 的数组）
+* initialValue （作为第一次调用 callback 的第一个参数，即previousValue。）
 
 ```js
 const combineReducers=(reducers)=>{
     return (state={},action)=>{
         return Object.keys(reducers).reduce(
-            (nextState,key)=>{
+            (nextState,key)=>{ //官方SAMPLE中的key就是todos和visibilityFilter
                 nextState[key]=reducers[key](
                     state[key],
                     action
