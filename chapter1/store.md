@@ -2,7 +2,7 @@
 
 ## store.subscribe\(\){}
 
-只要有动作被分发，那么store就会执行subscribe里面的内容
+只要有动作被分发，那么store就会执行subscribe里面的**函数（注意，必须得是一个function）**
 
 ```js
 store.subscribe(render)
