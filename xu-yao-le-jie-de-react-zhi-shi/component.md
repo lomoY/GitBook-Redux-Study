@@ -19,7 +19,7 @@ console.log(Component===React.Component)//true
 
 ## 为什么需要通过extends Component来实现？
 
-
+因为通过继承React.Component，就会具有一些React Component的公有方法，如生命周期函数
 
 
 
