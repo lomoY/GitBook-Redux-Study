@@ -21,5 +21,15 @@ console.log(Component===React.Component)//true
 
 因为通过继承React.Component，就会具有一些React Component的公有方法，如生命周期函数
 
+## 继承Component的要点
+
+1. Component是要被继承的，继承的对象应当是一个class
+2. Component应当包含一个render函数\(\)
+3. React开发中不建议自定义基类Class
+
+## 组合VS.继承
+
+
+
 
 
