@@ -1,6 +1,12 @@
 # Store
 
-## store.subscribe\(\){}
+## store与reducer绑定
+
+const store = createStore\(reducer\)
+
+## store与render绑定
+
+### store.subscribe\(\){}
 
 只要有动作被分发，那么store就会执行subscribe里面的**函数（注意，必须得是一个function）**
 
@@ -18,6 +24,4 @@ store.subscribe(render)
 * State是这些处理的最终目的
 
 流程文字解释：render函数中生成的dom节点被用户操作（如点击），触发action，reducer针对具体action改变state，state被改变后render函数被重新触发
-
-
 
