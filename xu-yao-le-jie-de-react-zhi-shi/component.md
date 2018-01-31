@@ -1,0 +1,25 @@
+# Component
+
+在React中，一个Component就是一个单独的视觉组件
+
+## React.Component VS. Component
+
+在React中，我们会看到别人的代码中有两种继承方式：
+
+```js
+class ViewTodoApp extends React.Component{} 
+class ViewTodoApp extends Component{}
+```
+
+这两种方式是一致的，我们可以通过下面的这行代码来检验
+
+```js
+console.log(Component===React.Component)//true
+```
+
+## 为什么需要通过extends Component来实现？
+
+
+
+
+
