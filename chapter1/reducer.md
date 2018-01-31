@@ -50,5 +50,33 @@ const todoAPP = combineReducers({
 })
 ```
 
+#### combineReducer的实现原理
+
+Object.key\(对象\)，该函数并返回一个包含所传入对象所有属性名的数组
+
+```js
+var obj1 ={a:1,b:2}
+Object.keys(obj1);//得到["a", "b"]
+```
+
+数组.reduce\(\)
+
+```js
+const combineReducers=(reducers)=>{
+    return (state={},action)=>{
+        return Object.keys(reducers).reduce(
+            (nextState,key)=>{
+                nextState[key]=reducers[key](
+                    state[key],
+                    action
+                );
+                return nextState;
+            },
+            {}
+        )
+    }
+}
+```
+
 
 
