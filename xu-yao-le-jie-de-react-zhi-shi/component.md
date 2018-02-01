@@ -33,5 +33,9 @@ console.log(Component===React.Component)//true
 
 ## 给props赋值
 
+## component 、功能组件
+
+
+
 
 

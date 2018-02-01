@@ -14,5 +14,16 @@ newObj//{a:1,b:2}
 1. 使用shorthand之前，变量必须已经声明过
 2. 属性的键对应的值与属性名相同
 
+## shorthand配合变量的结构
+
+```js
+const full = ({ first, last }) => first + ' ' + last;
+//等同于
+
+function full(person) {
+  return person.first + ' ' + person.last;
+}
+```
+
 
 
