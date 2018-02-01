@@ -33,9 +33,11 @@ console.log(Component===React.Component)//true
 
 ## 给props赋值
 
-## component 、功能组件
+## component 、
 
 
+
+小结，component是用来构建React组件的一种方式，而在开发中组件的形式有许多中，具体请看下一章节
 
 
 
