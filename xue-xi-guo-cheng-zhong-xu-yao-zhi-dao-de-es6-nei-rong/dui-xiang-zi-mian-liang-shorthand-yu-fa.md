@@ -5,8 +5,11 @@
 ```js
 var a=1;
 var b=2;
-var newObj ={a,b};//本质上就是 var newObj ={a:a,b:b}
-newObj//{a:1,b:2}
+var obj1 ={a,b};//本质上就是 var newObj ={a:a,b:b}
+obj1//{a:1,b:2}
+
+var obj2={c:1,a}//这样也可以哟！
+obj2//{c: 1, a: 1}
 ```
 
 这里要注意两点：
