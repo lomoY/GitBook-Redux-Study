@@ -11,4 +11,5 @@
   * [var, let, const 对比](xue-xi-guo-cheng-zhong-xu-yao-zhi-dao-de-es6-nei-rong/var-let-const-dui-bi.md)
 * [需要了解的React知识](xu-yao-le-jie-de-react-zhi-shi.md)
   * [Component](xu-yao-le-jie-de-react-zhi-shi/component.md)
+  * [refs](xu-yao-le-jie-de-react-zhi-shi/refs.md)
 
