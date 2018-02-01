@@ -21,7 +21,7 @@ store.subscribe(render)
 * Reducer, Render是具体的处理函数
 * Store是链接Reducer和Render的‘胶水’
 * State，Action是Reducer和Render所处理的对象
-* State是这些处理的最终目的
+* State是这些处理的最终目的, 而Action告诉State要如何变化
 
 流程文字解释：render函数中生成的dom节点被用户操作（如点击），触发action，reducer针对具体action改变state，state被改变后render函数被重新触发
 
