@@ -1,8 +1,8 @@
 # Refs
 
-Refs是获取DOM元素的好帮手！
+Refs是获取DOM元素的好帮手！利用ref的回调函数将DOM元素设置成class或者说component的属性，是实现访问DOM元素的常见模式。
 
-适合使用Refs的地方
+适合使用Refs的地方（我还没体会到）
 
 1. 管理focus行为，文本选中行为，媒体播放行为
 2. 触发动画
