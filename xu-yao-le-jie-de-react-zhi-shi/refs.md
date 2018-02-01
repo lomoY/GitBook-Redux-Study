@@ -22,7 +22,11 @@ React官方提到：在可以使用声明的方法解决的场景中，避免使
 如下面这行代码，ref所添加的回调函数所传入的**参数**就是所绑定的DOM对象。可以在回调函数中通过`this.input=node`的方式将当期的input添加到整个Component的属性中，从而使其可以被其他函数所访问。
 
 ```js
-<input type="textarea" ref={node=>{console.log(node)}}/>//<input type="textarea">
+<input type="textarea" ref={node=>{
+    console.log(node);//<input type="textarea">
+    this.input=node;//component内部就可以通过this.input.value来访问这个input的value了
+    }
+}/>
 ```
 
 ### refs的回调函数
