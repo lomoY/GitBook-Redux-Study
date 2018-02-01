@@ -12,6 +12,21 @@ React官方提到：在可以使用声明的方法解决的场景中，避免使
 
 ## 添加refs到DOM元素上
 
+当refs属性被添加到一个HTML DOM元素上后，它实现了两件事情：
+
+1. 获取了被添加refs DOM元素的DOM对象
+2. 给该DOM元素增加了一个回调函数（这个回调函数是干嘛的呢？和{}有啥区别呢？）
+
+### refs获取DOM对象
+
+如下面这行代码，ref所添加的回调函数所传入的**参数**就是所绑定的DOM对象。可以在回调函数中通过`this.input=node`的方式将当期的input添加到整个Component的属性中，从而使其可以被其他函数所访问。
+
+```js
+<input type="textarea" ref={node=>{console.log(node)}}/>//<input type="textarea">
+```
+
+### refs的回调函数
+
 refs可以添加到任何的DOM 元素上，并且绑定一个回调函数。并且, 当该元素mount或者unmount的时候就会**即刻触发**一个回调函数。
 
 如
