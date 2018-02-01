@@ -23,6 +23,7 @@ var fn = (x) => {x*x} //not right!因为需要添加return
 var fn =(x) => (x*x)  //okay
 var fn = (x) => x*x   //okay
 var fn = x => x*x     //good!
+var fn = x =>({x:x})  //good!
 
 //没有参数
 var fn=()=>4
@@ -37,5 +38,5 @@ fn(1,2)//3
 
 ## 箭头函数对于this绑定的影响
 
-
+ongoing....
 

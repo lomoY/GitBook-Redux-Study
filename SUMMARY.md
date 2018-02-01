@@ -14,5 +14,6 @@
 * [需要了解的React知识](xu-yao-le-jie-de-react-zhi-shi.md)
   * [Component](xu-yao-le-jie-de-react-zhi-shi/component.md)
   * [refs](xu-yao-le-jie-de-react-zhi-shi/refs.md)
+  * key
 * [尚未整理的那些乱七八糟的东西](shang-wei-zheng-li-de-na-xie-luan-qi-ba-zao-de-dong-xi.md)
 
