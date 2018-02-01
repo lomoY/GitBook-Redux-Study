@@ -26,8 +26,6 @@ function full(person) {
 }
 ```
 
-
-
 ```js
 //高级版，引用Redux教程中的sample code
 
@@ -55,5 +53,5 @@ const Filter = ({filter,children}) => (
 );
 ```
 
-（\*高级版代码片段中用到了children或者说props.children，详情请看对应[小结](/children)）
+（\*高级版代码片段中用到了children或者说props.children，详情请看对应[小节](/children)）
 
