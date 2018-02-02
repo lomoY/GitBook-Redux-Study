@@ -14,7 +14,6 @@ Sample1
 
 ```js
 const render=()=>{
-    console.log(store.getState())
     ReactDOM.render(
         <ViewTodoApp 
         {...store.getState()}/>,
@@ -23,5 +22,5 @@ const render=()=>{
 }
 ```
 
- {todos: Array\(0\), visibilityFilter: "SHOW\_ALL"}
+{todos: Array\(0\), visibilityFilter: "SHOW\_ALL"}
 
