@@ -12,6 +12,7 @@
   * [map函数](xue-xi-guo-cheng-zhong-xu-yao-zhi-dao-de-es6-nei-rong/maphan-shu.md)
   * [箭头函数](xue-xi-guo-cheng-zhong-xu-yao-zhi-dao-de-es6-nei-rong/jian-tou-han-shu-xie-fa.md)
   * [扩展运算符Spread\(...\)](xue-xi-guo-cheng-zhong-xu-yao-zhi-dao-de-es6-nei-rong/kuo-zhan-yun-suan-fu-spread.md)
+  * [Array相关函数](xue-xi-guo-cheng-zhong-xu-yao-zhi-dao-de-es6-nei-rong/arrayxiang-guan-han-shu.md)
 * [需要了解的React知识](xu-yao-le-jie-de-react-zhi-shi.md)
   * [props](xu-yao-le-jie-de-react-zhi-shi/props.md)
   * [Component](xu-yao-le-jie-de-react-zhi-shi/component.md)
