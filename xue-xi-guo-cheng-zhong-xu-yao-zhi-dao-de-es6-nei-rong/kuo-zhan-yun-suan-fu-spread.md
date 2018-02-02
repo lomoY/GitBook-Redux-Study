@@ -28,8 +28,9 @@ ReactDOM.render(
 
 上面的代码片段拆分开来就是：
 
-1. store.getState\(\)返回对象：{todos:\[\], visibilityFilter: "SHOW\_ALL"}
+1. store.getState\(\)返回**对象**：{todos:\[\], visibilityFilter: "SHOW\_ALL"}
 2. 我们通过
+
    ```js
    todos={store.getState().todos}
    visibilityFilter={store.getState().visibilityFilter}
