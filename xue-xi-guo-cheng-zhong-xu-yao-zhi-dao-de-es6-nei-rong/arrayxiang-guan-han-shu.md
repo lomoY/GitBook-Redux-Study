@@ -9,6 +9,7 @@ array.filter(function(currentValue,index,arr), thisValue)
 * **currentValue（必须）**：当前操作的数组元素
 * index：当前操作的数组元素在数组中的索引
 * arr：调用filter方法的数组本身
+* **function函数体内应当是做判断的，filter应当返回符合判断条件的元素，作为一个新的数组；如果没有元素符合判断条件，则返回空数组；**
 
 范例：
 
@@ -16,23 +17,20 @@ array.filter(function(currentValue,index,arr), thisValue)
 var arr = [1,2,3,4,5]
 //正确
 var b=arr.filter(function(ele){
-	return ele==1;
+    return ele==1;
 });
 b//[1]
-//不正确,函数不会自己回调
+
+//不正确,函数不会自己回调，需要加上return
 var c =arr.filter(function(ele){
-	 ele==1;
-	})
+     ele==1;
+    })
+    
 //不正确,filter函数是通过比较来返回的，而不是让我们对元素本身进行操作的
 var d =arr.filter(function(ele){
-	 return ele+1;
-	})
-
+     return ele+1;
+    })
 ```
-
-
-
-
 
 Redux官方教程中有一个函数的形参命名成了filter，使其与操作数组的filter方法同名，这样的行为应当避免
 
