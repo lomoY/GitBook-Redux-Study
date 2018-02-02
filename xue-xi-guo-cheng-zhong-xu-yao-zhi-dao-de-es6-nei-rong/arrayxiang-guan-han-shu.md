@@ -2,7 +2,7 @@
 
 语法：
 
-```
+```js
 array.filter(function(currentValue,index,arr), thisValue)
 ```
 
@@ -11,7 +11,7 @@ array.filter(function(currentValue,index,arr), thisValue)
 * arr：调用filter方法的数组本身
 * **function函数体内应当是做判断的，filter应当返回符合判断条件的元素，作为一个新的数组；如果没有元素符合判断条件，则返回空数组；**
 
-经过我的实验，我发现它本质上就是在遍历的时候判断当前return的语句是true还是false，true就return，false就不return。
+_经过我的实验，我发现它本质上就是在遍历的时候判断当前return的语句是true还是false，true就return，false就不return。_
 
 范例：
 
