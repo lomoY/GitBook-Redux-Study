@@ -13,5 +13,15 @@ ReactDOM.render(
 //此时,this.props={todos: Array(0), dogs: 123}
 ```
 
+高级一点的写法
 
+```js
+ReactDOM.render(
+        <ViewTodoApp 
+        {...store.getState()}/>,
+        document.getElementById("root")
+    )
+```
+
+所以这里就有了一个问题，store中的state到底是在哪儿添加上去的？[看这里](/chapter1/store.md)
 
