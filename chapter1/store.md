@@ -1,5 +1,13 @@
 # Store
 
+## Store三个重要方法
+
+dispatch\(\) 对应了action
+
+getState\(\) 对应了state
+
+subscribe\(listener\)对应了view
+
 ## store与reducer绑定
 
 const store = createStore\(reducer\)

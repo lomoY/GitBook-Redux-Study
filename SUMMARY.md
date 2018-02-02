@@ -12,6 +12,7 @@
   * [map函数](xue-xi-guo-cheng-zhong-xu-yao-zhi-dao-de-es6-nei-rong/maphan-shu.md)
   * [箭头函数](xue-xi-guo-cheng-zhong-xu-yao-zhi-dao-de-es6-nei-rong/jian-tou-han-shu-xie-fa.md)
 * [需要了解的React知识](xu-yao-le-jie-de-react-zhi-shi.md)
+  * [props](xu-yao-le-jie-de-react-zhi-shi/props.md)
   * [Component](xu-yao-le-jie-de-react-zhi-shi/component.md)
   * [组件的分类、用途](xu-yao-le-jie-de-react-zhi-shi/zu-jian-de-fen-lei-3001-yong-tu.md)
   * [refs](xu-yao-le-jie-de-react-zhi-shi/refs.md)
