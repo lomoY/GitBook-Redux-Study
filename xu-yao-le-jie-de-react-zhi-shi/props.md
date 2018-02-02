@@ -13,7 +13,7 @@ ReactDOM.render(
 //此时,this.props={todos: Array(0), dogs: 123}
 ```
 
-高级一点的写法
+高级一点的写法{...store.getState\(\)}
 
 ```js
 ReactDOM.render(

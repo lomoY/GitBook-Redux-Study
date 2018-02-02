@@ -6,6 +6,8 @@ dispatch\(\) 对应了action
 
 getState\(\) 对应了state
 
+store.state, store.state\(\)都是错误的，必须得store.getState\(\)
+
 subscribe\(listener\)对应了view
 
 ## store与reducer绑定
@@ -36,6 +38,4 @@ store.subscribe(render)
 # state是如何被添加到store中的？
 
 Redux中，store的state是需被reducer管理的。倒过来说，reducer定义了子state和相应的action，然后通过combinereducer将一个个state添加到store中。
-
-
 
