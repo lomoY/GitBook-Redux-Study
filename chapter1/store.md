@@ -33,9 +33,9 @@ store.subscribe(render)
 
 流程文字解释：render函数中生成的dom节点被用户操作（如点击），触发action，reducer针对具体action改变state，state被改变后render函数被重新触发
 
-
-
 # state是如何被添加到store中的？
+
+Redux中，store的state是需被reducer管理的。倒过来说，reducer定义了子state和相应的action，然后通过combinereducer将一个个state添加到store中。
 
 
 
