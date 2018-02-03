@@ -75,6 +75,8 @@ Object.keys(obj1);//得到["a", "b"]
   * array （调用 reduce 的数组）
 * initialValue （作为第一次调用 callback 的第一个参数，即previousValue。）
 
+combineReduce的实现原理：
+
 ```js
 const combineReducers=(reducers)=>{
     return (state={},action)=>{
@@ -92,5 +94,5 @@ const combineReducers=(reducers)=>{
 }
 ```
 
-
+解释：
 

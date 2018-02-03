@@ -39,3 +39,11 @@ store.subscribe(render)
 
 Redux中，store的state是需被reducer管理的。倒过来说，reducer定义了子state和相应的action，然后通过combinereducer将一个个state添加到store中。
 
+[`combineReducers()`](http://www.redux.org.cn/docs/api/combineReducers.html)
+
+所做的只是生成一个函数，这个函数来调用你的一系列 reducer，每个 reducer
+
+**根据它们的 key 来筛选出 state 中的一部分数据并处理**
+
+，然后这个生成的函数再将所有 reducer 的结果合并成一个大的对象。
+
