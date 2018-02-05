@@ -18,7 +18,7 @@ ReactDOM.render(
 ```js
 ReactDOM.render(
         <ViewTodoApp 
-        {...store.getState()}/>,//{todos:[],visibilityVilter}
+        {...store.getState()}/>,//{todos:[],visibilityVilter:''}
         document.getElementById("root")
     )
 ```

@@ -25,6 +25,8 @@ var fn = (x) => x*x   //okay
 var fn = x => x*x     //good!
 var fn = x =>({x:x})  //good!
 
+//传入一个方法的时候
+var fn = ({onAddClick})=> (<button type="button" onClick={()=>{onAddClick(input.value)}}>)
 
 //没有参数
 var fn=()=>4
@@ -35,7 +37,6 @@ var fn = (x,y)=>x+y;
 fn(1,2)//3
 
 var fn = ({x,y})=x+y;
-
 ```
 
 上面的代码可以看出，如果在**函数声明**外包裹了**花括号**，那么就需要**显示**地添加 return；而圆括号或者只有表达式则**默认添加return。**
