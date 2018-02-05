@@ -8,16 +8,87 @@
 
 具体代码举例：
 
-重构前：
+重构前：    
 
-```
-
+```js
+class ToDoView extends React.component{
+    ....
+    render(){
+        ....
+        return(
+        ...
+           <ul>
+            {visibleTodo.map(todo=>(
+                <li key={todo.id} 
+                    onClick={()=>{
+                        store.dispatch({
+                            type:"TOGGLE_TODO",
+                            id:todo.id
+                        })
+                    }} 
+                    style={{
+                        textDecoration:
+                            todo.completed?
+                                'line-through':
+                                'none'
+                    }}>
+                    {todo.text}
+                </li>
+            ))} 
+        </ul> 
+        )
+    }
+}
 ```
 
 重构后：
 
-```
+```js
+const Todo = ({//为什么要花括号
+    text,//将要渲染的数据放进参数中
+    completed,
+    onClick
+})=>(
+    <li 
+        onClick={onClick}//这样修改后，todo的点击行为就灵活多了
+        style={{textDecoration:completed?'line-through':'none'}}
+    >
+    {text}
+</li>
+)
 
+const TodoList = ({
+    todos,//和todo一样，将要传入的方法和参数作为参数传入组件，todoList只做展示
+    onTodoClick
+})=>(
+    <ul>
+        {todos.map(todo=>
+            <Todo
+                key={todo.id}
+                {...todo}//{id: 1, text: "", completed: false} react传入state和对象解构
+                onClick = {()=>onTodoClick(todo.id)}
+            />)       
+        }
+    </ul>
+)
+
+...
+
+class ToDoView extends React.component{
+    ....
+    render(){
+        ....
+        return(
+            ...
+            <TodoList todos={visibleTodo} 
+                    onTodoClick={id=>store.dispatch({
+                        type:"TOGGLE_TODO",
+                        id
+            })}
+            ...
+        )
+    }
+}
 ```
 
 
