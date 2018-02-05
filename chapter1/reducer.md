@@ -80,6 +80,7 @@ combineReduce的实现原理：
 ```js
 const combineReducers=(reducers)=>{
     return (state={},action)=>{
+        //Object.keys(reducers)获得["todos", "visibilityFilter"]
         return Object.keys(reducers).reduce(
             (nextState,key)=>{ //官方SAMPLE中的key就是todos和visibilityFilter
                 nextState[key]=reducers[key](
