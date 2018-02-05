@@ -1,3 +1,7 @@
+## React Component
+
+当一个组件是纯展示，又不需要用到React Component的内置函数的时候，就没有必要把它声明为一个class然后去继承Component，直接用函数式组件即可
+
 ## 函数式组件（又叫无状态组件）
 
 ```js
@@ -41,8 +45,8 @@ const Filter = ({filter,children}) => (
 
 参考文章：
 
-* https://medium.com/@joshblack/stateless-components-in-react-0-14-f9798f8b992d
-* https://qiutc.me/post/component-of-react.html
+* [https://medium.com/@joshblack/stateless-components-in-react-0-14-f9798f8b992d](https://medium.com/@joshblack/stateless-components-in-react-0-14-f9798f8b992d)
+* [https://qiutc.me/post/component-of-react.html](https://qiutc.me/post/component-of-react.html)
 
 
 
