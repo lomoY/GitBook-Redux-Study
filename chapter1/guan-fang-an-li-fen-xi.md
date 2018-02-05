@@ -44,10 +44,10 @@ class ToDoView extends React.component{
 重构后：
 
 ```js
-const Todo = ({//为什么要花括号
-    text,//将要渲染的数据放进参数中
+const Todo = ({    //为什么要花括号？因为传了一个方法？
+    text,            //将要渲染的数据放进参数中
     completed,
-    onClick
+    onClick        //点击事件参数的命名有两种方式。1.onClick，表示该Todo行为更灵活 2.onToggleClick，表明该点击是一个特定行为
 })=>(
     <li 
         onClick={onClick}//这样修改后，todo的点击行为就灵活多了
