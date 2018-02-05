@@ -91,5 +91,9 @@ class ToDoView extends React.component{
 }
 ```
 
+## 小结
 
+1.视图组件，应当关注于视觉的展示，具体执行什么功能，可以在调用的时候来决定
+
+2.参数的传递不应当过深，比如Filter需要一个叫currentFilter的值，为了获得这个值，就要先传入Footer，再从Footer传入Filter，而Footer自身并不会使用到这个值。过深的另外一个弊端就是父组件需要知道子组件需要哪些值，这样就使得组件缺乏封装性。
 
