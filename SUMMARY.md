@@ -19,6 +19,7 @@
   * [props](xu-yao-le-jie-de-react-zhi-shi/props.md)
   * [Component](xu-yao-le-jie-de-react-zhi-shi/component.md)
   * [组件的分类、用途](xu-yao-le-jie-de-react-zhi-shi/zu-jian-de-fen-lei-3001-yong-tu.md)
+    * 容器型组件
   * [refs](xu-yao-le-jie-de-react-zhi-shi/refs.md)
   * [key](xu-yao-le-jie-de-react-zhi-shi/key.md)
   * [children](xu-yao-le-jie-de-react-zhi-shi/children.md)
