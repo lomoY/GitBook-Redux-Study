@@ -139,5 +139,9 @@ class FilterContainer extends React.Component{
 }
 ```
 
+小结：
+
+* Filter可以从store中订阅到的属性，不再从父组件中一一传入，而是直接订阅
+
 
 
