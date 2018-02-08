@@ -81,7 +81,9 @@ const Filter = ({
 /*
 * Footer
 * 该组件现在只需用最简单的方式通过FilterContainer来使用Filter
-* 修改1 传参。visibilityFilter,onFilterClick 这两个值Footer本身不使用，也不关心，仅仅是Filter使用到了，所以删除
+* 修改点1 传参。visibilityFilter,onFilterClick 这两个值Footer本身不使用，也不关心，仅仅是Filter使用到了，所以删除
+* 修改点2 从直接调用Filter改为调用FilterContainer
+* 修改点3 只需要传入filter属性和children属性
 */
 
 const Footer = ()=>{
@@ -98,6 +100,9 @@ const Footer = ()=>{
 /*
 * Filter
 * 该组件只负责数据的展示，提供了一些参数，使得在调用的时候给它指派具体的数据和行为
+* 修改点1 不需要知道filter的值和当先选择的filter的值来进行判断从而决定要展示什么内容，把判断的过程交给父级，父级判断的结果作为active的值传入
+* 修改点2 喊出原先所指定的动作行为，将动作的指定交给父级
+* 修改点3
 */
 const Filter = ({
     active,
@@ -122,7 +127,11 @@ const Filter = ({
 /*
 * FilterContainer
 * 该组件负责数据的获取，并且告诉Filter子组件使用什么数据，发生什么行为
-* 利用this.props获得父组件传入的属性，而父组件不需要再考虑Filter具体需要哪些参数，实现了解耦
+* 修改点1 利用this.props获得父组件传入的属性，而父组件不需要再考虑Filter具体需要哪些参数，实现了解耦
+* 修改点2 通过store的订阅来获得store里对应的状态，而非通过父组件传入
+* 修改点3 forceUpdate
+* 修改点4 在Container中判断Filter的显示效果，而非在Filter的内部进行判断
+* 
 */
 class FilterContainer extends React.Component{
     componentDidMount(){
