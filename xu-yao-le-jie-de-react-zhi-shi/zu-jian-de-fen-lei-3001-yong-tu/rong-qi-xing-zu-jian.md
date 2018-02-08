@@ -13,7 +13,6 @@ const Footer = ({
             filter="SHOW_ALL" 
             selectedFilter={visibilityFilter}
             onClick={onFilterClick}
-
             >ALL</Filter>
         <Filter 
             filter="SHOW_ACTIVE" 
