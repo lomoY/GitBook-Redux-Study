@@ -17,6 +17,7 @@
   * [解构Destructuring](xue-xi-guo-cheng-zhong-xu-yao-zhi-dao-de-es6-nei-rong/jie-gou.md)
 * [需要了解的React知识](xu-yao-le-jie-de-react-zhi-shi.md)
   * [props](xu-yao-le-jie-de-react-zhi-shi/props.md)
+    * [如何函数？](xu-yao-le-jie-de-react-zhi-shi/props/ru-he-han-shu-ff1f.md)
   * [Component](xu-yao-le-jie-de-react-zhi-shi/component.md)
   * [组件的分类、用途](xu-yao-le-jie-de-react-zhi-shi/zu-jian-de-fen-lei-3001-yong-tu.md)
     * [容器型组件](xu-yao-le-jie-de-react-zhi-shi/zu-jian-de-fen-lei-3001-yong-tu/rong-qi-xing-zu-jian.md)
