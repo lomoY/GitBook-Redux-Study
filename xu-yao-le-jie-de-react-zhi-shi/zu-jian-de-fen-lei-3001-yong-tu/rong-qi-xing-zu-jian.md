@@ -3,6 +3,17 @@
 旧代码，包含关系：Footer---&gt;Filter
 
 ```js
+<Footer
+    visibilityFilter={visibilityFilter}
+    onFilterClick={filter=>store.dispatch({
+            type:"SET_VISIBILITY_FILTER",
+            filter
+        })
+    }
+/>
+```
+
+```js
 const Footer = ({
      visibilityFilter,
      onFilterClick
@@ -62,6 +73,10 @@ const Filter = ({
 
 新代码，包含关系：Footer---&gt; FilterContainer----&gt;Filter
 
+```
+<Footer/>
+```
+
 ```js
 /*
 * Footer
@@ -91,7 +106,6 @@ const Filter = ({
     if(active){
         return <span>{children}</span>
     }
-
     return(
         <a href="#" 
             onClick={ e => {
@@ -110,31 +124,29 @@ const Filter = ({
 * 利用this.props获得父组件传入的属性，而父组件不需要再考虑Filter具体需要哪些参数，实现了解耦
 */
 class FilterContainer extends React.Component{
-
     componentDidMount(){
         this.unsubscribe=store.subscribe(()=>this.forceUpdate)
     }
-
     componentWillUnmount(){
         this.unsubscribe();
     }
-
     render(){
         const props=this.props;
         const state=store.getState();
         return(
-            <Filter active={
+            <Filter 
+                active={
                         props.filter==state.visibilityFilter
                     }
-                    onClick={store.dispatch({
-                        type: "SET_VISIBILITY_FILTER",
-                        filter: props.filter
-                    })}
+                onClick={store.dispatch({
+                                type: "SET_VISIBILITY_FILTER",
+                                filter: props.filter
+                            })
+                        }
             >
             {props.children}
             </Filter>
         )
-
     }
 }
 ```
