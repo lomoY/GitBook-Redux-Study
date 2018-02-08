@@ -10,7 +10,18 @@ statement：something that you say or write in a formal or official way。声明
 
 expression：the act of making your thoughts, feelings。表达
 
+向组件传入点击事件的两种方式，不太能理解
 
+```js
+<Footer
+    visibilityFilter={visibilityFilter}
+    onFilterClick={filter=>store.dispatch({
+            type:"SET_VISIBILITY_FILTER",
+            filter
+        })
+    }
+/>
+```
 
 
 

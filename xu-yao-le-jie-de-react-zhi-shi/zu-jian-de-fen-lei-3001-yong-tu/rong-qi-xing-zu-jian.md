@@ -81,6 +81,7 @@ const Filter = ({
 /*
 * Footer
 * 该组件现在只需用最简单的方式通过FilterContainer来使用Filter
+* 修改1 传参。visibilityFilter,onFilterClick 这两个值Footer本身不使用，也不关心，仅仅是Filter使用到了，所以删除
 */
 
 const Footer = ()=>{
