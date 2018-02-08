@@ -116,7 +116,7 @@ const Filter = ({
         <a href="#" 
             onClick={ e => {
                 e.preventDefault();
-                onClick(filter)
+                onClick()
         }}>{children}
         </a>
     )
