@@ -1,7 +1,5 @@
 ## 组件分类成容器型组件和表现型组件的案例
 
-
-
 旧代码，包含关系：Footer---&gt;Filter
 
 ```js
@@ -15,7 +13,7 @@ const Footer = ({
             filter="SHOW_ALL" 
             selectedFilter={visibilityFilter}
             onClick={onFilterClick}
-            
+
             >ALL</Filter>
         <Filter 
             filter="SHOW_ACTIVE" 
@@ -41,7 +39,7 @@ const Filter = ({
     if(filter==selectedFilter){
         return <span>{children}</span>
     }
-    
+
     return(
         <a href="#" 
             onClick={ e => {
@@ -66,6 +64,11 @@ const Filter = ({
 新代码，包含关系：Footer---&gt; FilterContainer----&gt;Filter
 
 ```js
+/*
+* Footer
+* 该组件现在只需用最简单的方式通过FilterContainer来使用Filter
+*/
+
 const Footer = ()=>{
    return <div>
     SHOW:
@@ -77,6 +80,10 @@ const Footer = ()=>{
 ```
 
 ```js
+/*
+* Filter
+* 该组件只负责数据的展示，提供了一些参数，使得在调用的时候给它指派具体的数据和行为
+*/
 const Filter = ({
     active,
     children,
@@ -98,6 +105,11 @@ const Filter = ({
 ```
 
 ```js
+/*
+* FilterContainer
+* 该组件负责数据的获取，并且告诉Filter子组件使用什么数据，发生什么行为
+* 利用this.props获得父组件传入的属性，而父组件不需要再考虑Filter具体需要哪些参数，实现了解耦
+*/
 class FilterContainer extends React.Component{
 
     componentDidMount(){
@@ -107,7 +119,7 @@ class FilterContainer extends React.Component{
     componentWillUnmount(){
         this.unsubscribe();
     }
-    
+
     render(){
         const props=this.props;
         const state=store.getState();
@@ -127,8 +139,6 @@ class FilterContainer extends React.Component{
     }
 }
 ```
-
-
 
 
 
