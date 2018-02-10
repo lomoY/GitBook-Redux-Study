@@ -24,8 +24,11 @@
   * [refs](xu-yao-le-jie-de-react-zhi-shi/refs.md)
   * [key](xu-yao-le-jie-de-react-zhi-shi/key.md)
   * [children](xu-yao-le-jie-de-react-zhi-shi/children.md)
+  * context
 * [尚未整理的那些乱七八糟的东西](shang-wei-zheng-li-de-na-xie-luan-qi-ba-zao-de-dong-xi.md)
 * [待解决的问题](dai-jie-jue-de-wen-ti.md)
 * [Redux DevTools](redux-devtools.md)
 * [常见error](chang-jian-error.md)
+* [React-Redux](react-redux.md)
+* React-Router
 
