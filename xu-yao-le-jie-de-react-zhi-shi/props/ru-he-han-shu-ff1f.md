@@ -36,8 +36,6 @@ const Filter = ({
 
 需要注意，这里的onClick是一个函数名，从技术上而言，把它写成'onFilterClick'也是可以的。但是在这个例子中，Filter只包含了一个点击事件，所以作者直接把属性名写成了’onClick‘，实际开发中我认为因当避免这样做，以防止和markup的内置属性混淆。
 
-
-
 ## 函数传值
 
 定义时
@@ -50,7 +48,6 @@ const AddTodo = ({onAddClick}) =>{
     return(
         <div>
             <input type="textarea" ref={node=>{
-                // this.input=node;
                 input = node;
             }}/>
             <button type="button"
